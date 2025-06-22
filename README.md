@@ -1,4 +1,4 @@
-Trading Bot
+# Trading Bot
 
 A comprehensive trading bot system that fetches stock data, predicts prices using various statistical and machine learning methods, and provides a real-time dashboard interface.
 
