@@ -1,4 +1,4 @@
-# 🤖 AI Trading Bot with Streamlit Dashboard
+Trading Bot
 
 A comprehensive trading bot system that fetches stock data, predicts prices using various statistical and machine learning methods, and provides a real-time dashboard interface.
 
@@ -63,16 +63,13 @@ trading-bot/
 ## 🛠️ Installation & Setup
 
 ### 1. Clone or Download the Project
-```bash
-# If using git
-git clone <repository-url>
+```
+git clone https://github.com/Hem810/Trading-Bot/
 cd trading-bot
-
-# Or download and extract the files
 ```
 
 ### 2. Install Dependencies
-```bash
+```
 pip install -r requirements.txt
 ```
 
@@ -88,11 +85,6 @@ export POLYGON_API_KEY="your_api_key_here"
 ### 4. Run the Dashboard
 ```bash
 python run_dashboard.py
-```
-
-Or directly with Streamlit:
-```bash
-streamlit run dashboard/streamlit_app.py
 ```
 
 ## 💻 Usage
@@ -128,44 +120,6 @@ streamlit run dashboard/streamlit_app.py
 - Real-time price movement charts
 - Volume and market data streaming
 
-#### 💼 Portfolio
-- Current positions and trade history
-- Performance metrics and P&L tracking
-- Risk management statistics
-
-### Programmatic Usage
-
-```python
-from main_trading_bot import TradingBot
-from config import Config
-
-# Initialize bot
-symbols = ['AAPL', 'GOOGL', 'MSFT']
-config = Config.get_config()
-bot = TradingBot(symbols, config)
-
-# Fetch data and analyze
-bot.fetch_historical_data()
-analysis = bot.analyze_symbol('AAPL')
-
-# Get predictions
-predictions = bot.generate_predictions('AAPL')
-
-# Start real-time monitoring
-bot.start_real_time_monitoring()
-```
-
-## ⚙️ Configuration
-
-### Environment Variables
-```bash
-# Optional API keys for enhanced data
-ALPHA_VANTAGE_API_KEY=your_key_here
-POLYGON_API_KEY=your_key_here
-
-# Environment setting
-TRADING_BOT_ENV=development  # or 'production'
-```
 
 ### Config Parameters
 - **Initial Capital**: Starting portfolio value
@@ -194,59 +148,6 @@ TRADING_BOT_ENV=development  # or 'production'
 - **R²**: Coefficient of determination
 - **MAPE**: Mean Absolute Percentage Error
 
-## 📡 WebSocket Integration
-
-The system uses a unified WebSocket handler that:
-- Provides real-time price updates
-- Supports multiple concurrent connections
-- Handles connection failures gracefully
-- Integrates seamlessly with Streamlit for live updates
-
-### WebSocket Features
-- **Real-time Price Streaming**: Live market data
-- **Connection Management**: Automatic reconnection
-- **Data Queuing**: Buffered data for reliability
-- **Callback System**: Event-driven data processing
-
-## 🚨 Risk Disclaimer
-
-**⚠️ IMPORTANT: This is for educational and research purposes only.**
-
-- This bot is designed for learning and experimentation
-- **NOT** intended for live trading without proper risk management
-- Historical performance does not guarantee future results
-- Always do your own research before making financial decisions
-- Consider consulting with financial professionals
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-1. **Module Import Errors**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Data Fetching Issues**
-   - Check internet connection
-   - Verify symbol names are correct
-   - Some data sources may have rate limits
-
-3. **WebSocket Connection Issues**
-   - Firewall may block connections
-   - Try restarting the dashboard
-   - Check network connectivity
-
-4. **Memory Issues with Large Datasets**
-   - Reduce the number of symbols
-   - Use shorter time periods
-   - Close other applications
-
-### Debug Mode
-```bash
-# Run with debug logging
-TRADING_BOT_ENV=development python run_dashboard.py
-```
 
 ## 📈 Performance Optimization
 
@@ -256,28 +157,3 @@ TRADING_BOT_ENV=development python run_dashboard.py
 3. **Shorter Periods**: Use 6 months instead of 1 year for faster analysis
 4. **Disable Real-time**: Turn off WebSocket updates when not needed
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📝 License
-
-This project is for educational purposes. Please ensure you comply with all applicable financial regulations and terms of service for data providers.
-
-## 🆘 Support
-
-For issues and questions:
-1. Check the troubleshooting section
-2. Review the code comments and documentation
-3. Search for similar issues online
-4. Create an issue with detailed error information
-
----
-
-**Happy Trading! 📈🤖**
-
-*Remember: Past performance is not indicative of future results. Trade responsibly.*
